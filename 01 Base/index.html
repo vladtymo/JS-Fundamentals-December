@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Base</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <script>
+        // JS code...
+        let a = 10;
+        console.log("Script in <script> before DOM tag...");
+
+        console.log(document.querySelector("h1"));
+    </script>
+
+    <h1>Introduction to <abbr title="JavaScript">JS</abbr></h1>
+    <p>
+        JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World
+        Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage
+        behavior, often incorporating third-party libraries. <a
+            href="https://en.wikipedia.org/wiki/JavaScript">Wikipedia</a>
+    </p>
+
+    <script>
+        // JS code...
+        // inline comment
+        /*
+            block comment
+        */
+        let b = 10;
+        console.log("Script in <script> tag after DOM...");
+
+        console.log(document.querySelector("h1"));
+    </script>
+
+    <script src="./main.js">
+        // code here is ignored
+    </script>
+</body>
+
+</html>
