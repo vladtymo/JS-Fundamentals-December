@@ -3,8 +3,10 @@
 // -------- if else statement
 // if (condition) { code }
 
+// ariphmetic operations
 5 + 10;     // 15
 5 + true;   // 6
+// logic operations
 "hello" > "bye"; // true
 true === false;  // false
 10 !== '10';     // true
