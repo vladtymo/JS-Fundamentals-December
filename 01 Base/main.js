@@ -15,7 +15,7 @@ let email = "example@gmail.com";        // string
 let text = 'Hello dear, "Vlad"';        // string
 let letter = 'A';                       // string
 
-let isValid = true;
+let isValid = true;                     // boolean
 
 let undefinedVar = undefined;           // undefined (bad practice)
 let emptyVar = null;                    // null
