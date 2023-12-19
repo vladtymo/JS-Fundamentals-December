@@ -5,25 +5,25 @@ let array = [];
 let colors = ["red", "green", "blue", "black"];
 // const mixed = [120, null, "hello", true, [1, 2, 3], { id: 1002, title: "Super" }, () => { }];
 
-// colors[3] = "pink";
-// // all values between are undefined
-// // [4]...[19]: undefined
-// colors[20] = "white"; // bad practice
+colors[3] = "pink";
+// all values between are undefined
+// [4]...[19]: undefined
+colors[20] = "white"; // bad practice
 
-// console.log("[3]:", colors[3]); // "black"
-// console.log("[4]:", colors[4]); // undefined
-// console.log("[100]:", colors[20]); // white
+console.log("[3]:", colors[3]); // "black"
+console.log("[4]:", colors[4]); // undefined
+console.log("[100]:", colors[20]); // white
 
-// console.log("Colors arr length: ", colors.length); // 21
+console.log("Colors arr length: ", colors.length); // 21
 
-// // access by index: 0>
-// console.log("Colors: ", colors);
+// access by index: 0>
+console.log("Colors: ", colors);
 
-// colors[0] = "yellow";
-// console.log("First color: ", colors[0]);
-// console.log("Mixed arr length: ", mixed.length); // 7
+colors[0] = "yellow";
+console.log("First color: ", colors[0]);
+console.log("Mixed arr length: ", mixed.length); // 7
 
-// console.log("Is Array: ", Array.isArray(colors));
+console.log("Is Array: ", Array.isArray(colors));
 
 // ------------ methods
 colors.pop();           // remove last
