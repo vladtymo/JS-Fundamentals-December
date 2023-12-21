@@ -12,10 +12,10 @@ try {
     console.log("Start try block!");
 
     let num = 10.456789;
-    // console.log(email);             // ReferenceError
-    // num.pop();                      // TypeError
-    // console.log(num.toFixed(-2));   // RangeError
-    // eval('leg a = 10;');            // SyntaxError, EvalError
+    console.log(email);             // ReferenceError
+    num.pop();                      // TypeError
+    console.log(num.toFixed(-2));   // RangeError
+    eval('leg a = 10;');            // SyntaxError, EvalError
 
     // if an exception occured -> go to catch block
     // the code below is ignored
@@ -51,40 +51,40 @@ let numbers = [120, 9, -1, 0, 99, 33];
 console.log("Original:", numbers);
 
 // ----- Uncaught Error
-//removeByIndex(null, 33);    // Error
-//removeByIndex(numbers, 33); // RangeError
+removeByIndex(null, 33);    // Error
+removeByIndex(numbers, 33); // RangeError
 
-//removeByIndex(numbers, indexToRemove); // Uncaugth exception
+removeByIndex(numbers, indexToRemove); // Uncaugth exception
 
 // 1 - show error in console when error is occured
-// try {
-//     const indexToRemove = +prompt("Enter index of the item to remove:");
-//     removeByIndex(numbers, indexToRemove);
+try {
+    const indexToRemove = +prompt("Enter index of the item to remove:");
+    removeByIndex(numbers, indexToRemove);
 
-//     // save new array to file
+    // save new array to file
 
-// } catch (error) {
-//     console.error(`${error.name}: ${error.message}`);
-// }
+} catch (error) {
+    console.error(`${error.name}: ${error.message}`);
+}
 
-// console.log("Continue...");
+console.log("Continue...");
 
-// numbers = []; // clear
+numbers = []; // clear
 
-// // 2 - show client alert in browser when error is occured
-// try {
-//     const indexToRemove = +prompt("Enter index of the item to remove:");
-//     removeByIndex(numbers, indexToRemove);
+// 2 - show client alert in browser when error is occured
+try {
+    const indexToRemove = +prompt("Enter index of the item to remove:");
+    removeByIndex(numbers, indexToRemove);
 
-// } catch (error) {
+} catch (error) {
 
-//     if (error instanceof RangeError) //if (error.name === "RangeError")
-//         alert(error.message);
-//     else if (error instanceof Error)
-//         console.log("Fill the array and try again!");
-// }
+    if (error instanceof RangeError) //if (error.name === "RangeError")
+        alert(error.message);
+    else if (error instanceof Error)
+        console.log("Fill the array and try again!");
+}
 
-// console.log("After remove:", numbers);
+console.log("After remove:", numbers);
 
 // --------- try {...} catch {...} finaly {...}
 try {
@@ -99,13 +99,13 @@ try {
     // disconnect from database
 }
 
-// try {
-//     let num = 10.456789;
-//     num.sort();
+try {
+    let num = 10.456789;
+    num.sort();
 
-// } finally {
-//     console.log("Crear resources!");
-// }
+} finally {
+    console.log("Crear resources!");
+}
 
 // TASK: calculate summ of item in the client range
 function getSumm(arr, start, end) {
@@ -144,12 +144,12 @@ try {
 console.log("Array:", numbers);
 
 // -------------- create custom exception type
-// class EmptyArrayError extends TypeError {
-//     constructor(message) {
-//         super(message);
-//     }
+class EmptyArrayError extends TypeError {
+    constructor(message) {
+        super(message);
+    }
 
-//     message() {
-//         return "Array is empty.";
-//     }
-// }
+    message() {
+        return "Array is empty.";
+    }
+}
