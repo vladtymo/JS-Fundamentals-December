@@ -182,4 +182,26 @@ console.log(Object.keys(manager));
 console.log(Object.values(manager));
 
 // ------------------ Symbol ------------------
-//...
+const myId = Symbol(3344);
+let yourId = Symbol(3344);
+
+console.log("My = Your: ", myId == yourId); // false
+
+yourId = myId;
+console.log("My = Your: ", myId == yourId); // true
+
+let order = {
+    number: 120,
+    total: 3500,
+    client: "Bob Super",
+    [myId]: "rgaegre-aeg-353-gser"
+}
+
+console.log("Code: ", order.code);          // undefined
+console.log("Code: ", order.myId);          // undefined
+console.log("Code: ", order[Symbol(3344)]); // undefined
+console.log("Code: ", order[myId]);         // "..."
+
+// get iterator property
+let i = numbers[Symbol.iterator];
+console.log("Iterator:", i);
